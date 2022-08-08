@@ -1,0 +1,42 @@
+%-------------------------
+% Resume in Latex
+% Author : Chaitanya Varu
+% Based off of:  https://github.com/jakegut/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+% packages
+
+\usepackage[empty]{fullpage}  
+\usepackage{titlesec}  
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}   %for list numbering
+\usepackage[hidelinks]{hyperref}  %for hyperlinks
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+
+
+%--------------------------------
+
+% styling
+\input{premble/styling}
+
+% custom commands
+\input{premble/customCommands}
+
+%--------------------------------
+
+%  body
+
+\begin{document}
+
+\input{body/top}
+\input{body/education}
+\input{body/projects}
+\input{body/skills}
+\input{body/courses}
+\input{body/languages}
+
+\end{document}
