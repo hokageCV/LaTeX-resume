@@ -2,7 +2,6 @@
 % Resume in Latex
 % Author : Chaitanya Varu
 % Based off of:  https://github.com/jakegut/resume
-% License : MIT
 %------------------------
 
 \documentclass[letterpaper,11pt]{article}
@@ -16,6 +15,7 @@
 \usepackage[hidelinks]{hyperref}  %for hyperlinks
 \usepackage{fancyhdr}
 \usepackage{fontawesome5}
+\usepackage{xcolor}
 
 
 %--------------------------------
@@ -32,11 +32,13 @@
 
 \begin{document}
 
+\input{body/colors}
 \input{body/top}
 \input{body/education}
+\input{body/experience}
 \input{body/projects}
 \input{body/skills}
-\input{body/courses}
-\input{body/languages}
+% \input{body/certifications}
+% \input{body/languages}
 
 \end{document}

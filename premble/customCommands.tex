@@ -1,10 +1,15 @@
 % Custom commands
+
+% Usage: \resumeItem{content}
+% Description: Create an item in a resume list. Use this for listing individual items within a section.
 \newcommand{\resumeItem}[1]{
   \item\small{
     {#1 \vspace{-2pt}}
   }
 }
 
+% Usage: \resumeSubheading{Title}{Date}{Subtitle}{Location}
+% Description: Create a subheading in a resume section. Typically used for job positions, education, etc.
 \newcommand{\resumeSubheading}[4]
 { \vspace{-2pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -13,6 +18,8 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Usage: \resumeSubSubheading{Subtitle}{Date}
+% Description: Create a sub-subheading within a subheading. Suitable for providing additional details or achievements.
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -20,6 +27,8 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Usage: \resumeProjectHeading{Title}{Date}
+% Description: Create a heading for projects or specific achievements within a section.
 \newcommand{\resumeProjectHeading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -27,11 +36,22 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Usage: \resumeSubItem{content}
+% Description: Create a sub-item within a list. Useful for providing additional details under a main item.
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
+% Usage: \begin{resumeSubHeadingList}
+%          ...
+%        \end{resumeSubHeadingList}
+% Description: Begin a list of subheadings. Use this to create a structured list of items under a main section.
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+% Usage: \begin{resumeItemList}
+%          ...
+%        \end{resumeItemList}
+% Description: Begin a list of items. Use this to list multiple items or details within a subheading.
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
