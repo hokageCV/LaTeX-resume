@@ -18,6 +18,26 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Usage: \resumeSubheading{Title}{Date}{Subtitle}{Location}
+% Description: Create a subheading in a resume section. Typically used for job positions, education, etc.
+\newcommand{\resumeSubheadingConditional}[4]{
+    \vspace{-2pt}\item
+    \ifthenelse{\equal{#1}{} \AND \equal{#2}{}}{
+        % Skip rendering if both title and date are empty
+    }{
+        \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+            \ifthenelse{\equal{#1}{}}{}{\textbf{#1}} & \ifthenelse{\equal{#2}{}}{}{#2} \\ % Title and Date
+        \end{tabular*}
+    }
+
+    % Always render the subtitle and location in the same line
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textit{\small #3} & {\small #4} \\ % Subtitle and Location
+    \end{tabular*}
+
+    \vspace{-7pt}
+}
+
 % Usage: \resumeSubSubheading{Subtitle}{Date}
 % Description: Create a sub-subheading within a subheading. Suitable for providing additional details or achievements.
 \newcommand{\resumeSubSubheading}[2]{
